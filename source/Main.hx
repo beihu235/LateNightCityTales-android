@@ -99,7 +99,7 @@ class Main extends Sprite
 		fpsVar = new FPS(5, 5, 0xFFFFFF);
 		addChild(fpsVar);
 		if(fpsVar != null) {
-			fpsVar.visible = ClientPrefs..showFPS;
+			fpsVar.visible = ClientPrefs.showFPS;
 		}
 		/*
 		fpsBG = new FPSBG(10, 3, 'test');
