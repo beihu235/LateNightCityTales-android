@@ -65,9 +65,9 @@ import FunkinLua;
 import DialogueBoxPsych;
 import flixel.addons.editors.pex.FlxPexParser;
 import flixel.addons.text.FlxTypeText;
-#if sys
+
 import sys.FileSystem;
-#end
+
 
 using StringTools;
 
@@ -2194,7 +2194,7 @@ class PlayState extends MusicBeatState
 		var songName:String = Paths.formatToSongPath(SONG.song);
 		var file:String = Paths.json(songName + '/events');
 		#if sys
-		if (FileSystem.exists(Paths.modsJson(songName + '/events')) || FileSystem.exists(file)) {
+		//if (FileSystem.exists(Paths.modsJson(songName + '/events')) || FileSystem.exists(file)) {
 		#else
 		if (OpenFlAssets.exists(file)) {
 		#end
@@ -3695,7 +3695,7 @@ class PlayState extends MusicBeatState
 					if(FlxTransitionableState.skipNextTransIn) {
 						CustomFadeTransition.nextCamera = null;
 					}
-					MusicBeatState.switchState(new FinState());
+					//MusicBeatState.switchState(new FinState());
 
 					// if ()
 					if(!ClientPrefs.getGameplaySetting('practice', false) && !ClientPrefs.getGameplaySetting('botplay', false)) {

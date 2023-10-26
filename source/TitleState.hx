@@ -783,7 +783,7 @@ class TitleState extends MusicBeatState
 			new FlxTimer().start(1, function(tmr:FlxTimer)
 			{
 				isTransing=false;
-				LoadingState.loadAndSwitchState(new OpeningState());
+				//LoadingState.loadAndSwitchState(new OpeningState());
 				FreeplayState.destroyFreeplayVocals();
 			});
 			
